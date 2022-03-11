@@ -17,6 +17,8 @@ public class Code01_PrintB {
         // 32位
         int a = 5;
         // ~取反 位运算 |, ^, &
+        // -N = ~N + 1;
+        //系统最小 取反+1 还是他自己
         int b = ~a;
         int c = 11;
         print(a);
