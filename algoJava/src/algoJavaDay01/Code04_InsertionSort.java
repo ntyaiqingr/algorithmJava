@@ -1,6 +1,6 @@
 package algoJavaDay01;
 
-public class Code03_InsertionSort {
+public class Code04_InsertionSort {
 
     public static void insertionSort1(int arr[]) {
         if (arr == null || arr.length < 2) {
