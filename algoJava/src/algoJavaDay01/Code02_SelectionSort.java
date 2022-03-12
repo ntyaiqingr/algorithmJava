@@ -34,6 +34,5 @@ public class Code02_SelectionSort {
         printArray(arr);
        selectionSort(arr);
        printArray(arr);
-
     }
 }
