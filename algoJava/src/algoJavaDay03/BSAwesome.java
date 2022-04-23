@@ -41,7 +41,7 @@ public class BSAwesome {
         int[] arr = new int[len];
         if (len > 0) {
             arr[0] = (int) (Math.random() * maxValue);
-            for (int i = 0; i < len; i++) {
+            for (int i = 1; i < len; i++) {
                 do {
                     arr[i] = (int) (Math.random() * maxValue);
                 } while (arr[i] == arr[i - 1]);
@@ -57,7 +57,7 @@ public class BSAwesome {
         int left = minIndex - 1;
         int right = minIndex + 1;
         boolean leftBigger = left >= 0 ? arr[left] > arr[minIndex] : true;
-        boolean rightBigger = right < arr.length ? arr[right] < arr[minIndex] : true;
+        boolean rightBigger = right < arr.length ? arr[right] > arr[minIndex] : true;
         return  rightBigger && leftBigger;
     }
 
@@ -69,7 +69,7 @@ public class BSAwesome {
     }
 
     public static void main(String[] args) {
-        int maxLen = 5;
+        int maxLen = 10;
         int maxValue = 20;
         int testTimes = 100000;
         System.out.println("Start");
@@ -78,7 +78,7 @@ public class BSAwesome {
             int ans = oneMinIndex(arr);
             if (!checkResult(arr, ans)) {
                 printArray(arr);
-                System.out.println(ans);
+                System.out.println("ans: " + ans);
                 break;
             }
         }
